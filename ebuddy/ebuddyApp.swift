@@ -39,7 +39,7 @@ struct ebuddyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserView()
         }
         .modelContainer(sharedModelContainer)
     }
