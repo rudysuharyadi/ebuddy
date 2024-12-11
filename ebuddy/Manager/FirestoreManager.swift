@@ -28,4 +28,16 @@ class FirestoreManager {
         }
     }
     
+    func updateImageURL(uid: String, imageURL: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        let userRef = db.collection("USERS").document(uid)
+        userRef.updateData(["imageURL": imageURL]) { error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            print("updated")
+            completion(.success(()))
+        }
+    }
+    
 }
