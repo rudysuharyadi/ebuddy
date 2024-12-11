@@ -41,7 +41,7 @@ struct PhotoUploadView: View {
             Form {
                 photoPickerSection
                 imagesSection
-                if let image = photoUploadVM.images.first {
+                if photoUploadVM.images.first != nil {
                     if photoUploadVM.isUploading {
                         ProgressView()
                     } else {

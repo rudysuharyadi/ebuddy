@@ -60,6 +60,7 @@ import SwiftUI
         
     }
     
+    @MainActor
     func uploadImage(uid: String) {
         guard let image = images.first else { return }
         guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
