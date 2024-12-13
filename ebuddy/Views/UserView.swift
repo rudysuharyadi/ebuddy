@@ -46,6 +46,13 @@ struct UserView: View {
             .onAppear {
                 userVM.getUsers()
             }
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink(destination: MockView()) {
+                        Text("Mock View")
+                    }
+                }
+            }
         }
     }
 }
